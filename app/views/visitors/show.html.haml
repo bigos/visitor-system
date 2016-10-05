@@ -1,0 +1,27 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @visitor.name
+%p
+  %b Arrived at:
+  = @visitor.arrived_at
+%p
+  %b Departed at:
+  = @visitor.departed_at
+%p
+  %b Host:
+  = @visitor.host_id
+%p
+  %b Host name:
+  = @visitor.host_name
+%p
+  %b Visit purpose:
+  = @visitor.visit_purpose
+%p
+  %b Status:
+  = @visitor.status
+
+= link_to 'Edit', edit_visitor_path(@visitor)
+\|
+= link_to 'Back', visitors_path

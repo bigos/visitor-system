@@ -1,0 +1,33 @@
+%h1 Listing visitors
+
+%table
+  %thead
+    %tr
+      %th Name
+      %th Arrived at
+      %th Departed at
+      %th Host
+      %th Host name
+      %th Visit purpose
+      %th Status
+      %th
+      %th
+      %th
+
+  %tbody
+    - @visitors.each do |visitor|
+      %tr
+        %td= visitor.name
+        %td= visitor.arrived_at
+        %td= visitor.departed_at
+        %td= visitor.host_id
+        %td= visitor.host_name
+        %td= visitor.visit_purpose
+        %td= visitor.status
+        %td= link_to 'Show', visitor
+        %td= link_to 'Edit', edit_visitor_path(visitor)
+        %td= link_to 'Destroy', visitor, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Visitor', new_visitor_path
