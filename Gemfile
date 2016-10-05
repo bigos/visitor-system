@@ -50,6 +50,7 @@ gem 'haml'
 gem 'haml-rails', '~> 0.9'
 
 gem 'simple_form'
+gem 'devise'
 
 group :development do
   gem 'better_errors' # https://github.com/charliesome/better_errors
