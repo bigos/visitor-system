@@ -10,7 +10,17 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+//= require moment
+//= require bootstrap-datetimepicker
+//= require pickers
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+$(document).on('ready page:change', function() {
+    $('.datetimepicker').datetimepicker({
+        // put here your custom picker options, that should be applied for all pickers
+    });
+
+});

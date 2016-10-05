@@ -52,6 +52,10 @@ gem 'haml-rails', '~> 0.9'
 gem 'simple_form'
 gem 'devise'
 
+gem 'momentjs-rails', '~> 2.9',  :github => 'derekprior/momentjs-rails'
+gem 'datetimepicker-rails', github: 'zpaulovics/datetimepicker-rails', branch: 'master', submodules: true
+gem "font-awesome-rails"
+
 group :development do
   gem 'better_errors' # https://github.com/charliesome/better_errors
   gem 'binding_of_caller'

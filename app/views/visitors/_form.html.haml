@@ -1,4 +1,4 @@
-= form_for @visitor do |f|
+= simple_form_for @visitor do |f|
   - if @visitor.errors.any?
     #error_explanation
       %h2= "#{pluralize(@visitor.errors.count, "error")} prohibited this visitor from being saved:"
@@ -8,18 +8,18 @@
 
   .field
     = f.label :name
-    = f.text_field :name
+    = f.input :name
   .field
     = f.label :arrived_at
-    = f.datetime_select :arrived_at
+    = f.input :arrived_at
   .field
     = f.label :host_id
-    = f.text_field :host_id
+    = f.input :host_id
   .field
     = f.label :host_name
-    = f.text_field :host_name
+    = f.input :host_name
   .field
     = f.label :visit_purpose
-    = f.text_area :visit_purpose
+    = f.input :visit_purpose
   .actions
-    = f.submit 'Save'
+    = f.button :submit
