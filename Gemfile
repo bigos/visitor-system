@@ -68,6 +68,20 @@ group :development, :test do
   gem 'rails-erd'
 end
 
+group :development, :test do
+  gem 'rspec-rails', '~> 3.5'
+  gem 'byebug'
+
+  gem 'factory_girl_rails', '~> 4.7'
+end
+
+group :test do
+  gem 'cucumber-rails', require: false
+  gem 'selenium-webdriver'
+  # http://www.virtuouscode.com/2012/08/31/configuring-database_cleaner-with-rails-rspec-capybara-and-selenium/
+  gem 'database_cleaner', '~> 1.5'
+  gem 'launchy'
+end
 
 # we do not load these two gems into our Rails application, hence require: false
 # but we make sure others in the team know about those gems and use them
