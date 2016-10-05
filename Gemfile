@@ -81,6 +81,8 @@ group :test do
   # http://www.virtuouscode.com/2012/08/31/configuring-database_cleaner-with-rails-rspec-capybara-and-selenium/
   gem 'database_cleaner', '~> 1.5'
   gem 'launchy'
+
+  gem 'rails-controller-testing'
 end
 
 # we do not load these two gems into our Rails application, hence require: false
