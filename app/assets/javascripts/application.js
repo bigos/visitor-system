@@ -22,3 +22,5 @@ $(document).on('ready page:change', function() {
     $(document).foundation();
 
 });
+
+$(function(){ $(document).foundation(); });
