@@ -26,7 +26,8 @@ class VisitorsController < ApplicationController
   # POST /visitors.json
   def create
     @visitor = Visitor.new(visitor_params)
-
+    @visitor.creator = current_user
+    @visitor.status = 'expected'
     respond_to do |format|
       if @visitor.save
         format.html { redirect_to @visitor, notice: 'Visitor was successfully created.' }
