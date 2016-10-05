@@ -7,19 +7,14 @@
           %li= msg
 
   .field
-    = f.label :name
     = f.input :name
   .field
-    = f.label :arrived_at
-    = f.input :arrived_at
+    = f.input :arrived_at, as: :datetime_picker
   .field
-    = f.label :host_id
     = f.input :host_id
   .field
-    = f.label :host_name
     = f.input :host_name
   .field
-    = f.label :visit_purpose
     = f.input :visit_purpose
   .actions
     = f.button :submit
