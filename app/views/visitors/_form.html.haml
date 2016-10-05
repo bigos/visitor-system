@@ -13,9 +13,6 @@
     = f.label :arrived_at
     = f.datetime_select :arrived_at
   .field
-    = f.label :departed_at
-    = f.datetime_select :departed_at
-  .field
     = f.label :host_id
     = f.text_field :host_id
   .field
@@ -24,8 +21,5 @@
   .field
     = f.label :visit_purpose
     = f.text_area :visit_purpose
-  .field
-    = f.label :status
-    = f.text_field :status
   .actions
     = f.submit 'Save'

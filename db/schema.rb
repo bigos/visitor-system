@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161005101207) do
+ActiveRecord::Schema.define(version: 20161005114547) do
 
   create_table "hosts", force: :cascade do |t|
     t.string   "name"
@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(version: 20161005101207) do
     t.string   "status"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
+    t.datetime "expected_at"
   end
 
 end
