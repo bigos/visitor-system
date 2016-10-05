@@ -46,3 +46,27 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem 'haml'
+
+group :development do
+  gem 'better_errors' # https://github.com/charliesome/better_errors
+  gem 'binding_of_caller'
+end
+
+group :development, :test do
+  # Debugging tool
+  gem 'pry'
+  gem 'pry-byebug'
+
+  # Debug slow code with Stack Tracy
+  gem 'stack_tracy'
+
+  # Db schema graph
+  gem 'rails-erd'
+end
+
+
+# we do not load these two gems into our Rails application, hence require: false
+# but we make sure others in the team know about those gems and use them
+gem 'rubocop', '~> 0.42.0', require: false
+gem 'reek', require: false
