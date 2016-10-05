@@ -3,7 +3,8 @@ require 'rails_helper'
 RSpec.describe Visitor, type: :model do
   describe 'validation' do
     it 'has valid factory' do
-      expect(build(:visitor)).to be_valid
+      u = create :user
+      expect(build(:visitor, user_id: u.id)).to be_valid
     end
 
     describe 'requires presence of' do
