@@ -6,4 +6,5 @@ class User < ApplicationRecord
 
   has_one :host
   has_many :visitors, through: :host
+  has_many :created_visitors, class_name: 'Visitor', inverse_of: :creator
 end

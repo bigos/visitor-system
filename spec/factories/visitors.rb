@@ -6,7 +6,7 @@ FactoryGirl.define do
     host_id 1
     host_name "MyString"
     visit_purpose "MyText"
-    status "MyString"
+    status 'expected'
     creator_id 1
   end
 end

@@ -4,7 +4,8 @@ RSpec.describe Visitor, type: :model do
   describe 'validation' do
     it 'has valid factory' do
       u = create :user
-      expect(build(:visitor, user_id: u.id)).to be_valid
+      h = create :host
+      expect(build(:visitor, host_id: h.id, creator_id: u.id)).to be_valid
     end
 
     describe 'requires presence of' do
