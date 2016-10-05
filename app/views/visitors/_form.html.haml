@@ -9,7 +9,7 @@
   .field
     = f.input :name
   .field
-    = f.input :arrived_at, as: :datetime_picker
+    = f.input :arrived_at, as: :datetime, input_html: { class: 'datetime_picker' }
   .field
     = f.input :host_id
   .field
