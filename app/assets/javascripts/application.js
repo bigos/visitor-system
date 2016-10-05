@@ -19,7 +19,7 @@
 
 $(document).on('ready page:change', function() {
     $('.datetime_picker').fdatetimepicker();
-    $(document).foundation();
+
 
 });
 
