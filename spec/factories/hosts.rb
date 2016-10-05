@@ -1,6 +1,6 @@
 FactoryGirl.define do
   factory :host do
-    name ""
-    location "MyString"
+    name 'Anthony Jones'
+    location 'Sales'
   end
 end
