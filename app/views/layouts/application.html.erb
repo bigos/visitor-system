@@ -13,7 +13,17 @@
 
   <body>
 
-    <%= yield %>
+
+    <div class="row alerts">
+      <%= display_flash_messages %>
+    </div>
+
+
+    <div class="row">
+      <%= yield %>
+    </div>
+
+    <%= render 'layouts/nav' if current_user %>
 
   </body>
 </html>
