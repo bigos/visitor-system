@@ -53,6 +53,7 @@ gem 'simple_form'
 gem 'devise'
 
 gem 'foundation-rails'
+gem 'foundation_rails_helper'
 gem 'foundation-datetimepicker-rails'
 
 gem 'font-awesome-sass', '~> 4.6.2'
