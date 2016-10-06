@@ -23,6 +23,8 @@ $(document).on('turbolinks:load', function() {
     $(function(){ $(document).foundation(); });
     $('.datetime_picker').fdatetimepicker({
         todayHighlight: true,
-        autoclose: true});
+        autoclose: true,
+        language: 'en'
+    });
     console.log("It works on each visit!");
-})
+});
