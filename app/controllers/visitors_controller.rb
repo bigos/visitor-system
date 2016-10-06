@@ -1,6 +1,6 @@
 class VisitorsController < ApplicationController
   before_action :authenticate_user!
-  before_action :set_visitor, only: [:show, :edit, :update, :destroy]
+  before_action :set_visitor, only: [:show, :edit, :update, :destroy, :depart]
 
   # GET /visitors
   # GET /visitors.json
@@ -61,6 +61,17 @@ class VisitorsController < ApplicationController
     respond_to do |format|
       format.html { redirect_to visitors_url, notice: 'Visitor was successfully destroyed.' }
       format.json { head :no_content }
+    end
+  end
+
+  def depart
+    respond_to do |format|
+      if @visitor.depart!
+        format.html { redirect_to visitors_url, notice: 'Visitor has departed.' }
+        format.json { head :no_content }
+      else
+        format.html { redirect_to visitors_url, alert: 'There was an error marking the departure. Contact technical support.' }
+      end
     end
   end
 

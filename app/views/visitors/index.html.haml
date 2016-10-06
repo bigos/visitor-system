@@ -13,6 +13,7 @@
       %th
       %th
       %th
+      %th
 
   %tbody
     - @visitors.each do |visitor|
@@ -23,14 +24,14 @@
         %td= visitor.host_id
         %td= visitor.host_name
         %td= visitor.visit_purpose
-        %td= visitor.status
+        %td= status_info visitor.status
+        %td= link_to 'Depart', depart_visitor_path(visitor), :data => { :confirm => "Confirm departure of #{visitor.name}" }, class: 'button warn'
         %td= link_to 'Show', visitor
         %td= link_to 'Edit', edit_visitor_path(visitor)
         %td= link_to 'Destroy', visitor, :method => :delete, :data => { :confirm => 'Are you sure?' }
 
-%br
-
-= will_paginate @visitors, renderer: FoundationPagination::Rails
+.text-center
+  = will_paginate @visitors, renderer: FoundationPagination::Rails
 
 %br
 

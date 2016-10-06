@@ -18,9 +18,8 @@
         %td= link_to 'Edit', edit_host_path(host)
         %td= link_to 'Destroy', host, :method => :delete, :data => { :confirm => 'Are you sure?' }
 
-%br
-
-= will_paginate @visitors, renderer: FoundationPagination::Rails
+.text-center
+  = will_paginate @visitors, renderer: FoundationPagination::Rails
 
 %br
 

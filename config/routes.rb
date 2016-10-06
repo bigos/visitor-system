@@ -3,7 +3,12 @@ Rails.application.routes.draw do
   resources :users
 
   resources :hosts
-  resources :visitors
+
+  resources :visitors do
+    member do
+      get 'depart'
+    end
+  end
 
   root to: 'visitors#index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
