@@ -21,6 +21,8 @@
 $(document).on('turbolinks:load', function() {
 
     $(function(){ $(document).foundation(); });
-    $('.datetime_picker').fdatetimepicker();
+    $('.datetime_picker').fdatetimepicker({
+        todayHighlight: true,
+        autoclose: true});
     console.log("It works on each visit!");
 })
