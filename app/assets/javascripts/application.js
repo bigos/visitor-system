@@ -23,6 +23,7 @@ $(document).on('turbolinks:load', function() {
     $(function(){ $(document).foundation(); });
     $('.datetime_picker').fdatetimepicker({
         todayHighlight: true,
+        format: 'dd-mm-yyyy hh:ii',
         autoclose: true,
         language: 'en'
     });
