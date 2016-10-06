@@ -1,5 +1,6 @@
 @import "foundation_and_overrides";
 @import 'foundation-datetimepicker';
+@import 'foundation-icons';
 @import "font-awesome-sprockets";
 @import "font-awesome";
 /*
@@ -17,3 +18,8 @@
  *= require_tree .
  *= require_self
  */
+
+
+// my own overrides
+.switch{color: #444;
+       }

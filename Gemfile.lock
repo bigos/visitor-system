@@ -122,6 +122,9 @@ GEM
     font-awesome-sass (4.6.2)
       sass (>= 3.2)
     foundation-datetimepicker-rails (0.2.4)
+    foundation-icons-sass-rails (3.0.0)
+      railties (>= 3.1.1)
+      sass-rails (>= 3.1.1)
     foundation-rails (6.2.3.0)
       railties (>= 3.1.0)
       sass (>= 3.3.0, < 3.5)
@@ -343,6 +346,7 @@ DEPENDENCIES
   factory_girl_rails (~> 4.7)
   font-awesome-sass (~> 4.6.2)
   foundation-datetimepicker-rails
+  foundation-icons-sass-rails
   foundation-rails
   haml
   haml-rails (~> 0.9)
