@@ -5,7 +5,7 @@ class HostsController < ApplicationController
   # GET /hosts
   # GET /hosts.json
   def index
-    @hosts = Host.all
+    @hosts = Host.paginate(:page => params[:page], per_page: 10)
   end
 
   # GET /hosts/1
