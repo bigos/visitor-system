@@ -4,6 +4,8 @@ class Visitor < ApplicationRecord
 
   validates :name, :arrived_at, :status, presence: true
   validates :host_id, presence: false
+
+  # TODO: what about those statuses
   validates :status, inclusion: { in: %w(expected present overstayed departed) }
 
   scope :present, -> { where.not(arrived_at: nil).where.not(status: 'departed') }
