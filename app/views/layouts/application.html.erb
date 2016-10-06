@@ -12,9 +12,10 @@
   </head>
 
   <body>
-    <%= display_flash_messages %>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    <div class="row alerts">
+      <%= display_flash_messages %>
+    </div>
+
 
     <div class="row">
       <%= yield %>

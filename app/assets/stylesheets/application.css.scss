@@ -35,8 +35,6 @@
   margin-bottom: 16px;
 }
 
-
-
 #error_explanation {
   width: 450px;
   border: 2px solid red;
@@ -59,5 +57,17 @@
   ul li {
     font-size: 12px;
     list-style: square;
+  }
+}
+
+.alerts{
+  .alert-box{
+    padding:1.5em;
+    a.close{
+      float:right;
+    }
+  }
+  .alert-box.success{
+    background: lighten(green,60%);
   }
 }

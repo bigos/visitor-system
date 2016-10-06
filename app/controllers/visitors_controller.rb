@@ -16,6 +16,7 @@ class VisitorsController < ApplicationController
   # GET /visitors/new
   def new
     @visitor = Visitor.new
+    @visitor.arrived_at = Time.now
   end
 
   # GET /visitors/1/edit
