@@ -5,7 +5,7 @@ class VisitorsController < ApplicationController
   # GET /visitors
   # GET /visitors.json
   def index
-    @visitors = Visitor.all
+    @visitors = Visitor.paginate(:page => params[:page], per_page: 10)
   end
 
   # GET /visitors/1

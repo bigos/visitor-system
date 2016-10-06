@@ -3,6 +3,8 @@ class ApplicationController < ActionController::Base
 
   helper_method :redirect_url
 
+
+
   def redirect_url
     return new_patron_session_path unless patron_signed_in?
     case current_patron

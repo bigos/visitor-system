@@ -58,6 +58,8 @@ gem 'foundation-datetimepicker-rails'
 
 gem 'font-awesome-sass', '~> 4.6.2'
 gem 'foundation-icons-sass-rails'
+gem 'will_paginate-foundation'
+
 
 gem 'jquery-turbolinks'
 
