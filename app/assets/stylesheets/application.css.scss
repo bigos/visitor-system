@@ -72,5 +72,13 @@
   .alert-box.success{
     background: lighten(green,60%);
   }
+  .alert-box.alert{
+    background: lighten(red,40%);
+  }
   margin-bottom:1em;
+}
+
+
+.top-bar-title{
+  margin-top: 7px;
 }

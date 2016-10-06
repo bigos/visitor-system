@@ -12,17 +12,7 @@
   </head>
 
   <body>
-
-    <div class="top-bar">
-      <div class="top-bar-title">
-        Visitors System
-      </div>
-    <ul class="menu">
-      <li><%= link_to 'Visitors', visitors_path %></li>
-      <li><%= link_to 'Hosts', hosts_path %></li>
-      <li><%= link_to 'Logout', hosts_path %></li>
-    </ul>
-    </div>
+    <%= render 'layouts/top-bar' if current_user %>
 
     <div class="row alerts">
       <%= display_flash_messages %>
