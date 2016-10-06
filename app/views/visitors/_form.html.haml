@@ -8,7 +8,7 @@
 
   .field
     = f.input :name
-  %div{ :class => 'field', 'data-turbolinks' => 'false' }
+  %div{ :class => 'field', :data =>{ 'turbolinks' => 'false'} }
     = f.input :arrived_at, input_html: { class: 'datetime_picker' }
   .field
     = f.input :host_id
@@ -17,4 +17,6 @@
   .field
     = f.input :visit_purpose
   .actions
-    = f.button :submit
+    = button_tag type: 'submit', class: 'button success' do
+      %i{class: 'fa fa-calendar'}
+      Submit

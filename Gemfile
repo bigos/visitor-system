@@ -54,7 +54,9 @@ gem 'devise'
 
 gem 'foundation-rails'
 gem 'foundation-datetimepicker-rails'
-gem "font-awesome-rails"
+
+gem 'font-awesome-sass', '~> 4.6.2'
+gem 'jquery-turbolinks'
 
 group :development do
   gem 'better_errors' # https://github.com/charliesome/better_errors
