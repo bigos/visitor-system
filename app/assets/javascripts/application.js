@@ -12,15 +12,15 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require turbolinks
 //= require foundation
 //= require foundation-datetimepicker
-//= require turbolinks
 //= require_tree .
 
-$(document).on('ready page:change', function() {
+$(document).on('ready  page:load page:change', function() {
     $('.datetime_picker').fdatetimepicker();
-
-
 });
+
+
 
 $(function(){ $(document).foundation(); });
