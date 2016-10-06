@@ -8,8 +8,8 @@
 
   .field
     = f.input :name
-  .field { 'data-turbolinks' => false }
-    = f.input :arrived_at, as: :datetime, input_html: { class: 'datetime_picker' }
+  %div{ :class => 'field', 'data-turbolinks' => 'false' }
+    = f.input :arrived_at, input_html: { class: 'datetime_picker' }
   .field
     = f.input :host_id
   .field

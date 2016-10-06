@@ -17,10 +17,9 @@
 //= require foundation-datetimepicker
 //= require_tree .
 
-$(document).on('ready  page:load page:change', function() {
+$(document).on('turbolinks:load', function() {
+
+    $(function(){ $(document).foundation(); });
     $('.datetime_picker').fdatetimepicker();
-});
-
-
-
-$(function(){ $(document).foundation(); });
+    console.log("It works on each visit!");
+})
