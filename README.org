@@ -17,8 +17,8 @@ This is a sample Rails 5 application.
 I have managed to configure Turbolinks properly in ~application.js~
 
 * Things that do not work
-- many validation
-- permission
+- many validations
+- permissions
 
 * After cloning the app
 #+BEGIN_EXAMPLE
