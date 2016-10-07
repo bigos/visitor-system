@@ -1,0 +1,17 @@
+* README
+
+This is a sample Rails 5 application.
+
+* Ruby version
+2.3.0
+
+* Gems worth mention
+- Rails 5
+- Turbolinks
+- Foundation
+- Rspec
+- Sqlite
+- Datepicker
+
+* Notable achevements
+I have managed to configure Turbolinks properly in ~application.js~
