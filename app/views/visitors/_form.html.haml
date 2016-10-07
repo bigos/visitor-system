@@ -16,8 +16,9 @@
     = f.input :host_name
   .field
     = f.input :visit_purpose
-  .field
-    = f.input :status, collection: Visitor::STATUSES
+  - unless @visitor.new_record?
+    .field
+      = f.input :status, collection: Visitor::STATUSES
   .actions
     %button{type: :submit, class: 'button success'}
       %i{class: 'fa fa-bug'}
