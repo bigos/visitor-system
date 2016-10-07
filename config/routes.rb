@@ -8,6 +8,9 @@ Rails.application.routes.draw do
     member do
       get 'depart'
     end
+    collection do
+      get 'present', to: 'visitors#index'
+    end
   end
 
   root to: 'visitors#index'

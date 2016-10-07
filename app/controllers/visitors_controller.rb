@@ -5,7 +5,11 @@ class VisitorsController < ApplicationController
   # GET /visitors
   # GET /visitors.json
   def index
-    @visitors = Visitor.paginate(:page => params[:page], per_page: 10)
+    if request.fullpath.index 'present'
+      @visitors = Visitor.present.paginate(:page => params[:page], per_page: 10)
+    else
+      @visitors = Visitor.paginate(:page => params[:page], per_page: 10)
+    end
   end
 
   # GET /visitors/1
@@ -68,7 +72,6 @@ class VisitorsController < ApplicationController
     respond_to do |format|
       if @visitor.depart!
         format.html { redirect_to visitors_url, notice: 'Visitor has departed.' }
-        format.json { head :no_content }
       else
         format.html { redirect_to visitors_url, alert: 'There was an error marking the departure. Contact technical support.' }
       end

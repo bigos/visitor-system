@@ -8,7 +8,7 @@ class Visitor < ApplicationRecord
   # TODO: what about those statuses
   validates :status, inclusion: { in: %w(expected present overstayed departed) }
 
-  scope :present, -> { where.not(arrived_at: nil).where.not(status: 'departed') }
+  scope :present, -> { where(status: 'present') }
 
   def depart!
     self.status = 'departed'
