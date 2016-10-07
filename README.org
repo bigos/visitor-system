@@ -33,6 +33,9 @@ Then in Rails console do...
 #+BEGIN_EXAMPLE
 u = User.new password: 'secret', email: 'user@example.com'
 u.save
+exit
+
+rails s
 #+END_EXAMPLE
 
 Then log in using your user's email and password.
