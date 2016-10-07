@@ -15,3 +15,24 @@ This is a sample Rails 5 application.
 
 * Notable achevements
 I have managed to configure Turbolinks properly in ~application.js~
+
+* Things that do not work
+- many validation
+- permission
+
+* After cloning the app
+#+BEGIN_EXAMPLE
+rake db:create
+rake db:migrate
+
+rails c
+#+END_EXAMPLE
+
+Then in Rails console do...
+
+#+BEGIN_EXAMPLE
+u = User.new password: 'secret', email: 'user@example.com'
+u.save
+#+END_EXAMPLE
+
+Then log in using your user's email and password.
